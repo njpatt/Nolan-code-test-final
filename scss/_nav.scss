@@ -1,0 +1,32 @@
+// Navbar
+.navbar {
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      bottom: 15%;
+      height: 120%;
+    }
+  }
+
+  .nav-item {
+    @include media-breakpoint-up(xl) {
+      font-size: 1.25rem;
+    }
+  }
+}
+#scroll-logo {
+  transition: transform 0s ease-in-out;
+  @include media-breakpoint-up(lg) {
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.scrolled #scroll-logo {
+  transform: translateY(0px);
+  @include media-breakpoint-up(lg) {
+    transform: translateY(-35px);
+  }
+}

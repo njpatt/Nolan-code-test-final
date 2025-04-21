@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nolan Patterson | CarbonHouse Code Test</title>
+    <!-- Required Glide Core stylesheet -->
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="top-nav  sticky-top  bg-white">
+        <div class="container-fluid  d-none d-lg-block position-relative ">
+            <div class="row justify-content-end align-items-center h-100 ">
+                <div class="col d-flex align-items-center justify-content-end py-3">
+                    <h4 class="text-primary m-0">GET CONNECTED</h4>
+                    <div class="mx-3">
+                        <a href=""><img src="img/icons/instagram.svg" alt="Instagram Logo "></a>
+                    </div>
+                    <div class="mx-3">
+                        <a href=""><img src="img/icons/twitter.svg" alt="Twitter Logo (old)"></a>
+                    </div>
+                    <div class="mx-3">
+                        <a href=""><img src="img/icons/facebook.svg" alt="Facebook Logo"></a>
+                    </div>
+                    <div class="mx-3">
+                        <a href=""><img src="img/icons/youtube.svg" alt=""></a>
+                    </div>
+                    <div class="mx-3 w-25 ">
+                        <input type="text" class="form-control rounded-pill bg-light border-0 px-4" placeholder="SEARCH EVENTS">
+                    </div>
+                    <div class=" ps-4 mx-3 position-relative">
+                        <a class=" btn login-btn ">LOGIN
+                            <img class="img-fluid ms-2 w-50" src="img/icons/profile.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary  position-relative">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" id="scroll-logo">
+                    <img src="img/ch-venue-logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse py-2" id="navbarNav">
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item text-lg-center mx-xxl2-5 mx-2">
+                            <a class="nav-link text-white active" href="#">TICKETS</a>
+                        </li>
+                        <li class="nav-item text-lg-center mx-xxl2-5 mx-2">
+                            <a class="nav-link text-white" href="#">PLAN YOUR VISITS</a>
+                        </li>
+                        <li class="nav-item text-lg-center mx-xxl2-5 mx-2">
+                            <a class="nav-link text-white" href="#">VIP MEMBERS</a>
+                        </li>
+                        <li class="nav-item text-lg-center mx-xxl2-5 mx-2">
+                            <a class="nav-link text-white" href="#">ABOUT US</a>
+                        </li>
+                    </ul>
+                    <div class="row justify-content-center align-items-center h-100 d-lg-none d-block ">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="mx-3 w-75 my-2">
+                                    <input type="text" class="form-control  bg-light border-0 px-4" placeholder="SEARCH EVENTS">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center justify-content-center  mt-4">
+                            <h4 class="text-primary m-0 fs-5 text-white">GET CONNECTED</h4>
+                            <div class="mx-3">
+                                <a href=""><img src="img/icons/instagram-white.svg" alt="Instagram Logo "></a>
+                            </div>
+                            <div class="mx-3">
+                                <a href=""><img src="img/icons/twitter-white.svg" alt="Twitter Logo (old)"></a>
+                            </div>
+                            <div class="mx-3">
+                                <a href=""><img src="img/icons/facebook-white.svg" alt="Facebook Logo"></a>
+                            </div>
+                            <div class="mx-3">
+                                <a href=""><img src="img/icons/youtube-white.svg" alt="Youtube logo"></a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center pb-3">
+                            <div class=" col-md-6  text-center">
+                                <div class="text-center">
+                                    <div class=" text-center d-lg-none d-block  w-100">
+                                        <a class=" btn login-btn mt-5  text-center">Login
+                                            <img class="img-fluid ms-3" src="img/icons/profile.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Upcoming Events -->
+    <section id="upcoming-events">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-uppercase">Upcoming Events</h1>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <!-- View Toggle Buttons -->
+                    <div class="btn-group d-none d-md-block" role="group" aria-label="View toggle">
+                        <button type="button" class="btn btn-outline-secondary active border-0 me-3" id="grid-view-btn">
+                            <img src="img/icons/gallery-view-icon.svg" alt="" srcset="">
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary border-0" id="list-view-btn">
+                            <img src="img/icons/list-view-icon.svg" alt="" srcset="">
+                        </button>
+                    </div>
+                </div>
+                <div class="event-border "></div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gx-5 justify-content-center" id="events-container">
+                <!-- Event card 1: The Weeknd -->
+                <div class="col mb-4">
+                    <div id="gallery-card" class="event-card shadow-lg ">
+                        <img class="card-img-top" src="img/event-card/the-weeknd.webp" alt="Title" />
+                        <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                            <h5 class="fs-5 text-highlight date-text lead ">JULY 28, 2023</h5>
+                            <div class="date-shape">
+                                <div class="position-relative text-center">
+                                    <img class="img-fluid" src="img/event-card/date-shape.svg" alt="Side profile shot of the weekend against a red circle background">
+                                    <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">Friday</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title fs-2 text-uppercase">The Weeknd</h4>
+                            <p class="card-text fs-3">After Hours Tour</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="list-card" class="event-card shadow-lg">
+                                <div class="row align-items-center px-4 py-3">
+                                    <div class="col-5 col-lg-3"><img class="img-fluid rounded-2" src="img/event-card/the-weeknd.webp" alt="Title" /></div>
+                                    <div class="col-7">
+                                        <h4 class="card-title fs-3 text-uppercase">The Weeknd</h4>
+                                        <p class="card-text fs-5">After Hours Tour</p>
+                                    </div>
+                                </div>
+                                <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                                    <h5 class="fs-5 text-highlight date-text lead ">JULY 28, 2023</h5>
+                                    <div class="date-shape">
+                                        <div class="position-relative text-center">
+                                            <img class="img-fluid" src="img/event-card/date-shape.svg" alt="Side profile shot of the weekend against a red circle background">
+                                            <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">FRIDAY</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center ">
+                                    <a href="" class="btn btn-highlight w-100 h-100 py-4">
+                                        <img class="me-2 mb-0" src="img/icons/ticket.svg" alt="" srcset="">
+                                        Buy Tickets
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event card 2: BTS -->
+                <div class="col mb-4">
+                    <div id="gallery-card" class="event-card shadow-lg  ">
+                        <img class="card-img-top" src="img/event-card/bts.webp" alt="BTS band shot sitting on blue couch" />
+                        <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                            <h5 class="fs-5 text-highlight date-text lead ">JULY 30, 2023</h5>
+                            <div class="date-shape">
+                                <div class="position-relative text-center">
+                                    <img class="img-fluid" src="img/event-card/date-shape.svg" alt="BTS band shot sitting on blue couch">
+                                    <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">SUNDAY</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title fs-2 text-uppercase">BTS</h4>
+                            <p class="card-text fs-3">Map Of The Soul Tour</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="list-card" class="event-card shadow-lg">
+                                <div class="row align-items-center px-4 py-3">
+                                    <div class="col-5 col-lg-3"><img class="img-fluid rounded-2" src="img/event-card/bts.webp" alt="Title" /></div>
+                                    <div class="col-7">
+                                        <h4 class="card-title fs-3 text-uppercase">BTS</h4>
+                                        <p class="card-text fs-5">Map Of The Soul Tour</p>
+                                    </div>
+                                </div>
+                                <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                                    <h5 class="fs-5 text-highlight date-text lead ">JULY 30, 2023</h5>
+                                    <div class="date-shape">
+                                        <div class="position-relative text-center">
+                                            <img class="img-fluid" src="img/event-card/date-shape.svg" alt="Side profile shot of the weekend against a red circle background">
+                                            <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">SUNDAY</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center ">
+                                    <a href="" class="btn btn-highlight w-100 h-100 py-4">
+                                        <img class="me-2 mb-0" src="img/icons/ticket.svg" alt="" srcset="">
+                                        Buy Tickets
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event card 3: Dua Lipa -->
+                <div class="col mb-4">
+                    <div id="gallery-card" class="event-card shadow-lg  ">
+                        <img class="card-img-top" src="img/event-card/dua.webp" alt="Dua Lipa singing in front of green screen" />
+                        <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                            <h5 class="fs-5 text-highlight date-text lead ">AUGUST 12, 2023</h5>
+                            <div class="date-shape">
+                                <div class="position-relative text-center">
+                                    <img class="img-fluid" src="img/event-card/date-shape.svg" alt="">
+                                    <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">SATURDAY</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title fs-2 text-uppercase">DUA LIPA</h4>
+                            <p class="card-text fs-3">Future Nostalgia</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="list-card" class="event-card shadow-lg">
+                                <div class="row align-items-center px-4 py-3">
+                                    <div class="col-5 col-lg-3"><img class="img-fluid rounded-2" src="img/event-card/dua.webp" alt="Title" /></div>
+                                    <div class="col-7">
+                                        <h4 class="card-title fs-3 text-uppercase">DUA LIPA</h4>
+                                        <p class="card-text fs-5">Future Nostalgia</p>
+                                    </div>
+                                </div>
+                                <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                                    <h5 class="fs-5 text-highlight date-text lead ">AUGUST 12, 2023</h5>
+                                    <div class="date-shape">
+                                        <div class="position-relative text-center">
+                                            <img class="img-fluid" src="img/event-card/date-shape.svg" alt="Side profile shot of the weekend against a red circle background">
+                                            <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">SATURDAY</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center ">
+                                    <a href="" class="btn btn-highlight w-100 h-100 py-4">
+                                        <img class="me-2 mb-0" src="img/icons/ticket.svg" alt="" srcset="">
+                                        Buy Tickets
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event card 4: Lady Gaga -->
+                <div class="col mb-4">
+                    <div id="gallery-card" class="event-card shadow-lg  ">
+                        <img class="card-img-top" src="img/event-card/lady-gaga.webp" alt="Lady Gaga posing on blue background with long pink hair" />
+                        <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                            <h5 class="fs-5 text-highlight date-text lead ">AUGUST 18, 2023</h5>
+                            <div class="date-shape">
+                                <div class="position-relative text-center">
+                                    <img class="img-fluid" src="img/event-card/date-shape.svg" alt="">
+                                    <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">FRIDAY</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title fs-2 text-uppercase">LADY GAGA</h4>
+                            <p class="card-text fs-3">The Chromatica Ball</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="list-card" class="event-card shadow-lg">
+                                <div class="row align-items-center px-4 py-3">
+                                    <div class="col-5 col-lg-3"><img class="img-fluid rounded-2" src="img/event-card/lady-gaga.webp" alt="Lady Gaga posing on blue background with long pink hair" /></div>
+                                    <div class="col-7">
+                                        <h4 class="card-title fs-3 text-uppercase">LADY GAGA</h4>
+                                        <p class="card-text fs-5">The Chromatica Ball</p>
+                                    </div>
+                                </div>
+                                <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                                    <h5 class="fs-5 text-highlight date-text lead ">AUGUST 18, 2023</h5>
+                                    <div class="date-shape">
+                                        <div class="position-relative text-center">
+                                            <img class="img-fluid" src="img/event-card/date-shape.svg" alt="">
+                                            <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">FRIDAY</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center ">
+                                    <a href="" class="btn btn-highlight w-100 h-100 py-4">
+                                        <img class="me-2 mb-0" src="img/icons/ticket.svg" alt="" srcset="">
+                                        Buy Tickets
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event card 5: Harry Styles -->
+                <div class="col mb-4">
+                    <div id="gallery-card" class="event-card shadow-lg  ">
+                        <img class="card-img-top" src="img/event-card/harry-style copy.webp" alt="Harry Styles posing in a sweater" />
+                        <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                            <h5 class="fs-5 text-highlight date-text lead ">AUGUST 29, 2023</h5>
+                            <div class="date-shape">
+                                <div class="position-relative text-center">
+                                    <img class="img-fluid" src="img/event-card/date-shape.svg" alt="">
+                                    <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">TUESDAY</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title fs-2 text-uppercase">HARRY STYLES</h4>
+                            <p class="card-text fs-3">Love On Tour</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="list-card" class="event-card shadow-lg">
+                                <div class="row align-items-center px-4 py-3">
+                                    <div class="col-5 col-lg-3"><img class="img-fluid rounded-2" src="img/event-card/harry-style copy.webp" alt="Title" /></div>
+                                    <div class="col-7">
+                                        <h4 class="card-title fs-3 text-uppercase">HARRY STYLES</h4>
+                                        <p class="card-text fs-5">Love On Tour</p>
+                                    </div>
+                                </div>
+                                <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                                    <h5 class="fs-5 text-highlight date-text lead ">AUGUST 29, 2023</h5>
+                                    <div class="date-shape">
+                                        <div class="position-relative text-center">
+                                            <img class="img-fluid" src="img/event-card/date-shape.svg" alt="Side profile shot of the weekend against a red circle background">
+                                            <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">TUESDAY</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center ">
+                                    <a href="" class="btn btn-highlight w-100 h-100 py-4">
+                                        <img class="me-2 mb-0" src="img/icons/ticket.svg" alt="" srcset="">
+                                        Buy Tickets
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event card 6: Taylor Swift -->
+                <div class="col mb-4">
+                    <div id="gallery-card" class="event-card shadow-lg  ">
+                        <img class="card-img-top" src="img/event-card/t-swift.webp" alt="Taylor Swift standing at her performance with smoke in the background" />
+                        <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                            <h5 class="fs-5 text-highlight date-text lead ">SEPTEMBER 01, 2023</h5>
+                            <div class="date-shape">
+                                <div class="position-relative text-center">
+                                    <img class="img-fluid" src="img/event-card/date-shape.svg" alt="">
+                                    <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">FRIDAY</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center py-5">
+                            <h4 class="card-title fs-2 text-uppercase">TAYLOR SWIFT</h4>
+                            <p class="card-text fs-3">Eras Tour</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="list-card" class="event-card shadow-lg">
+                                <div class="row align-items-center px-4 py-3">
+                                    <div class="col-5 col-lg-3"><img class="img-fluid rounded-2" src="img/event-card/t-swift.webp" alt="Title" /></div>
+                                    <div class="col-7">
+                                        <h4 class="card-title fs-3 text-uppercase">TAYLOR SWIFT</h4>
+                                        <p class="card-text fs-5">Eras Tour</p>
+                                    </div>
+                                </div>
+                                <div class="card-info-banner bg-dark px-4 py-1 py-lg-2 ">
+                                    <h5 class="fs-5 text-highlight date-text lead ">SEPTEMBER 01, 2023</h5>
+                                    <div class="date-shape">
+                                        <div class="position-relative text-center">
+                                            <img class="img-fluid" src="img/event-card/date-shape.svg" alt="Taylor Swift standing at her performance with smoke in the background">
+                                            <h4 class="fs-4 position-absolute top-50 start-50 translate-middle text-primary ">FRIDAY</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body text-center ">
+                                    <a href="" class="btn btn-highlight w-100 h-100 py-4">
+                                        <img class="me-2 mb-0" src="img/icons/ticket.svg" alt="" srcset="">
+                                        Buy Tickets
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add CSS for list view styling -->
+    <!-- Newsletter Signup Section -->
+    <section id="newsletter">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 text-center ">
+                    <div class="newsletter-box">
+                        <h2 class="display-4 fw-bold text-uppercase text-white">NEWSLETTER SIGNUP</h2>
+                        <p class="text-white fs-4">Stay updated on the best concerts <br class="d-none d-sm-block"> and most hip events!</p>
+                        <a class="btn btn-primary-outline btn-lg z-2 w-auto" href="#">GET CONNECTED</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Social Contact Section -->
+    <section id="social-contact">
+        <div class="container-fluid">
+            <div class="row gx-5">
+                <div class="col-xl-6 ">
+                    <h2 class="display-4 fw-bold text-uppercase">GET SOCIAL</h2>
+                    <p class="fs-3 mt-n4">Stay Connected Wherever You Are!</p>
+                    <div class="card social-card shadow-lg mt-4 ">
+                        <ul class="nav nav-pills nav-justified " id="tabButtons" role="tablist">
+                            <li class="nav-item z-3" role="presentation">
+                                <button class="nav-link social-tab py-4 active " id="tab1-button" data-bs-toggle="tab" data-bs-target="#tab1-pane" type="button" role="tab" aria-controls="tab1-pane" aria-selected="true">
+                                    <img class="tab-icon " src="img/icons/twitter.svg" alt=""> <span class="h4 d-none d-md-block "> TWITTER</span>
+                                </button>
+                            </li>
+                            <li class="nav-item z-3" role="presentation">
+                                <button class="nav-link social-tab py-4" id="tab2-button" data-bs-toggle="tab" data-bs-target="#tab2-pane" type="button" role="tab" aria-controls="tab2-pane" aria-selected="false"> <img class="tab-icon" src="img/icons/instagram.svg" alt=""> <span class="h4 d-none d-md-block "> INSTAGRAM</span></button>
+                            </li>
+                            <li class="nav-item z-3" role="presentation">
+                                <button class="nav-link social-tab py-4" id="tab3-button" data-bs-toggle="tab" data-bs-target="#tab3-pane" type="button" role="tab" aria-controls="tab3-pane" aria-selected="false"> <img class="tab-icon" src="img/icons/facebook.svg" alt=""> <span class="h4 d-none d-md-block "> FACEBOOK</span></button>`
+                            </li>
+                        </ul>
+                        <div class="tab-content mt-3" id="tabContent">
+                            <div class="tab-pane fade show active" id="tab1-pane" role="tabpanel" aria-labelledby="tab1-button" tabindex="0">
+                                <div class="container">
+                                    <div class="glide carousel carousel-dark slide">
+                                        <div class="row justify-content-end">
+                                            <div class="col-lg-11">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <h4 class="text-primary">Follow <span class="text-highlight">@ CHVENUE</span></h4>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="glide__arrows float-end" data-glide-el="controls">
+                                                            <button class="carousel-control-prev " type="button" data-glide-dir="<">
+                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Previous</span>
+                                                            </button>
+                                                            <button class="carousel-control-next " type="button" data-glide-dir=">">
+                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Next</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="glide__track" data-glide-el="track">
+                                                    <ul class="glide__slides">
+                                                        <li class="glide__slide">
+                                                            <div class="card bg-light" style="min-height: 400px;">
+                                                                <div class="card-body p-4">
+                                                                    <div class="d-flex align-items-center my-4">
+                                                                        <img src="img/icons/twitter.svg" alt="" class="me-2">
+                                                                        <h4 class="m-0">@ CHVENUE</h4>
+                                                                    </div>
+                                                                    <p class="card-text">Catch unforgettable music moments at @acllive and @3TENaustin in Austin, TX. With over 130 concerts per year, discover world-renowned and local artists up close! #ACLLive #3TENACLLive</p>
+                                                                </div>
+                                                                <div class="card-footer bg-primary">
+                                                                    <div class=" d-flex">
+                                                                        <h4 class="text-white mb-0 fs-5">8:14 PM / 3 APR 2023</h4>
+                                                                        <div class="mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/comment.svg" alt="Comment Icon "></a>
+                                                                        </div>
+                                                                        <div class="mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/retweet.svg" alt="Retweet Icon"></a>
+                                                                        </div>
+                                                                        <div class=" mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/like.svg" alt="Like Icon"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="glide__slide">
+                                                            <div class="card bg-light" style="min-height: 400px;">
+                                                                <div class="card-body p-4">
+                                                                    <div class="d-flex align-items-center my-4">
+                                                                        <img src="img/icons/twitter.svg" alt="" class="me-2">
+                                                                        <h4 class="m-0">@ CHVENUE</h4>
+                                                                    </div>
+                                                                    <p class="card-text">Tickets for <a href="#" target="_blank">@Thundercat</a>'s In Yo Girl's City Tour go on sale tomorrow, 5/5 @ 10 am local time!! Get yours here <a href="http://go.axs.com/RzaC50OfofF">http://go.axs.com/RzaC50OfofF</a></p>
+                                                                </div>
+                                                                <div class="card-footer bg-primary">
+                                                                    <div class="d-flex">
+                                                                        <h4 class="text-white mb-0 fs-5">7:35 PM / 2 APR 2023</h4>
+                                                                        <div class="mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/comment.svg" alt="Comment Icon "></a>
+                                                                        </div>
+                                                                        <div class="mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/retweet.svg" alt="Retweet Icon"></a>
+                                                                        </div>
+                                                                        <div class=" mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/like.svg" alt="Like Icon"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="glide__slide">
+                                                            <div class="card bg-light" style="min-height: 400px;">
+                                                                <div class="card-body p-4">
+                                                                    <div class="d-flex align-items-center my-4">
+                                                                        <img src="img/icons/twitter.svg" alt="" class="me-2">
+                                                                        <h4 class="m-0">@ CHVENUE</h4>
+                                                                    </div>
+                                                                    <p class="card-text">Tickets for <a href="#" target="_blank">@derekhough</a>'s Symphony of Dance Tour go on sale this Friday, 4/28 @ 10 am local time!! Get yours here <a href="http://go.axs.com/Gzzi50NRXYl" target="_blank">http://go.axs.com/Gzzi50NRXYl</a></p>
+                                                                </div>
+                                                                <div class="card-footer bg-primary">
+                                                                    <div class="d-flex">
+                                                                        <h4 class="text-white mb-0 fs-5">9:08 AM / 1 APR 2023</h4>
+                                                                        <div class="mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/comment.svg" alt="Comment Icon "></a>
+                                                                        </div>
+                                                                        <div class="mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/retweet.svg" alt="Retweet Icon"></a>
+                                                                        </div>
+                                                                        <div class=" mx-2  ">
+                                                                            <a href=""><img class="twitter-icons" src="img/icons/like.svg" alt="Like Icon"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab2-pane" role="tabpanel" aria-labelledby="tab2-button" tabindex="0">
+                                <div class="px-4">
+                                    <div class="h4 text-center">Coming Soon!</div>
+                                    <!-- <div class="embed-responsive embed-responsive-1by1">
+                                        <iframe class="embed-responsive-item" src="https://www.instagram.com/axsevents/embed" allowfullscreen></iframe>
+                                    </div>
+                                    <script async src="//www.instagram.com/embed.js"></script> -->
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3-pane" role="tabpanel" aria-labelledby="tab3-button" tabindex="0">
+                                <div class="px-4">
+                                    <div class="embed-responsive embed-responsive-4by3">
+                                        <div class="h4 text-center">Coming Soon!</div>
+                                        <!-- <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faxs%2Fposts%2Fpfbid02RruG9tSzXvcJUxMXDcAiZw9EYnWmifyQkXMgbWknHwVU3me1UkaMwS15ysYeZBC1l&show_text=true&width=500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 ">
+                    <h2 class="display-4 fw-bold text-uppercase ">GET DIRECTIONS</h2>
+                    <p class="fs-3  mt-n4">Map Out Your Trip</p>
+                    <div class="card social-card  shadow-lg mt-4  ">
+                        <div class="card-header bg-highlight text-center ">
+                            <h4 class="mb-0 py-4">ADDRESS: 5727 WESTPARK DRIVE. 108, CHARLOTTE, NC 28217</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="ratio ratio-1x1" style="max-height: 500px;"><iframe src="https://www.google.com/maps/d/embed?mid=1HaxC-W2Nu_Z5iVEKo0wXRDh8-irNepU&ehbc=2E312F&noprof=1"></iframe></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <!-- Scripts -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+</body>
+
+</html>

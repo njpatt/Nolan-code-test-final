@@ -1,0 +1,24 @@
+h1,
+h2,
+h3 {
+  font-family: $primary-font !important;
+  font-weight: semibold !important;
+}
+
+h4,
+h5,
+h6 {
+  font-family: $primary-font !important;
+  font-weight: 500 !important;
+}
+p {
+  font-family: $tertiary-font !important;
+}
+.lead {
+  font-family: $primary-font !important;
+  font-weight: 400 !important;
+}
+
+.font-primary {
+  font-family: $primary-font !important;
+}

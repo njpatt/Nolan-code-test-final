@@ -1,0 +1,81 @@
+// Layout styles
+.container {
+  padding: 0 15px;
+}
+
+.container-fluid {
+  padding: 0 15px;
+  max-width: 95vw;
+}
+
+// Spacing utilities
+.section-spacing {
+  margin: 80px 0;
+}
+
+// Custom row spacing
+.row {
+  &.tight-spacing {
+    margin-left: -8px;
+    margin-right: -8px;
+
+    > [class*="col-"] {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+
+// Responsive adjustments
+@include media-breakpoint-down(md) {
+  .hero {
+    text-align: center;
+
+    .btn-group {
+      justify-content: center;
+    }
+  }
+}
+.eh {
+  // DOWN
+  &.eh-sm {
+    @include media-breakpoint-down(sm) {
+      min-height: auto !important;
+    }
+  }
+  &.eh-md {
+    @include media-breakpoint-down(md) {
+      min-height: auto !important;
+    }
+  }
+  &.eh-lg {
+    @include media-breakpoint-down(lg) {
+      min-height: auto !important;
+    }
+  }
+  &.eh-xl {
+    @include media-breakpoint-down(xl) {
+      min-height: auto !important;
+    }
+  }
+  &.eh-xxl {
+    @include media-breakpoint-down(xxl) {
+      min-height: auto !important;
+    }
+  }
+  &.eh-xxl2 {
+    @include media-breakpoint-down(xxl2) {
+      min-height: auto !important;
+    }
+  }
+  &.eh-xxl3 {
+    @include media-breakpoint-down(xxl3) {
+      min-height: auto !important;
+    }
+  }
+  &.eh-xxl4 {
+    @include media-breakpoint-down(xxl4) {
+      min-height: auto !important;
+    }
+  }
+}

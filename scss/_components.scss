@@ -1,0 +1,76 @@
+// Custom component styles
+
+// Cards
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+
+  .card-title {
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+  }
+}
+
+// Event Card Base Styles
+.event-card {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+
+  .card-title {
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+  }
+
+  .card-img-top {
+    border-radius: 5px !important;
+  }
+
+  .card-info-banner {
+    position: relative;
+    .date-text {
+      // @include media-breakpoint-down(sm) {
+      //   margin-bottom: 0 !important;
+      // }
+
+      margin-top: 1rem;
+    }
+    .date-shape {
+      position: absolute;
+      top: -25%;
+      right: 0;
+
+      @include media-breakpoint-up(xxl2) {
+        top: -30%;
+      }
+
+      img {
+        @include media-breakpoint-down(sm) {
+          width: 10rem;
+        }
+
+        width: 10rem;
+
+        @include media-breakpoint-up(md) {
+          width: 10rem;
+        }
+        @include media-breakpoint-up(lg) {
+          width: 12rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+          width: 9rem;
+        }
+        @include media-breakpoint-up(xxl) {
+          width: 14rem;
+        }
+        @include media-breakpoint-up(xxl2) {
+          width: 16rem;
+        }
+        height: auto;
+      }
+    }
+  }
+}

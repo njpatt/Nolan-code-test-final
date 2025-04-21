@@ -1,0 +1,20 @@
+{
+    "name": "bootstrap-scss-landing-page",
+    "version": "1.0.0",
+    "description": "Simple landing page with Bootstrap 5 and SCSS",
+    "main": "index.js",
+    "scripts": {
+        "start": "gulp",
+        "build": "gulp build"
+    },
+    "dependencies": {
+        "@glidejs/glide": "^3.7.1",
+        "bootstrap": "^5.3.2"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.29.3",
+        "gulp": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "sass": "^1.69.5"
+    }
+}

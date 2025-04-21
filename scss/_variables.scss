@@ -1,0 +1,86 @@
+// Custom variable overrides for Bootstrap
+$primary: #101920;
+$secondary: #d9d9d9;
+
+$highlight: #00b2ff;
+
+$tertiary: #d9d9d9;
+$light: #ebebeb;
+$dark: #101920;
+$black: #000000;
+$white: #ffffff;
+
+$font-family-sans-serif: "Roboto", system-ui, -apple-system, "Segoe UI",
+  "Helvetica Neue", Arial, sans-serif;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$headings-font-weight: 700;
+
+$enable-shadows: true !default;
+$enable-responsive-font-sizes: true;
+
+$primary-font: "Oswald", sans-serif;
+$secondary-font: "Merriweather", serif;
+$tertiary-font: "Lato", sans-serif;
+
+// scss-docs-start position-map
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%,
+  auto: auto,
+) !default;
+// scss-docs-end position-map
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxl2: 1600px,
+  xxl3: 1900px,
+  xxl4: 2400px,
+) !default;
+// scss-docs-end grid-breakpoints
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxl2: 1520px,
+  xxl3: 1600px,
+  // xxl4: 1600px,
+) !default;
+// scss-docs-end container-max-widths
+
+// Retina media query variable
+$retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx)";
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  n1: $spacer * -0.25,
+  n2: $spacer * -0.5,
+  n3: -$spacer,
+  n4: $spacer * -1.5,
+  n5: $spacer * -3,
+  n6: $spacer * -6,
+) !default;
+// scss-docs-end spacer-variables-maps

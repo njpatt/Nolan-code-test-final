@@ -1,0 +1,89 @@
+// Buttons
+.btn {
+  padding: 0.5rem 1.5rem;
+
+  &.btn-lg {
+    padding: 0.75rem 2rem;
+  }
+}
+
+.btn {
+  &.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+    font-family: $primary-font !important;
+    font-weight: 500;
+
+    &:hover {
+      background-color: darken($white, 10%);
+      border-color: darken($primary, 10%);
+    }
+  }
+
+  &.btn-primary-outline {
+    background-color: $black;
+    border-color: $white;
+    border: 2px solid;
+    color: $white;
+    font-family: $primary-font !important;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $highlight;
+      border-color: $white;
+    }
+  }
+  &.btn-highlight {
+    background-color: $highlight;
+    border: none;
+    color: $primary;
+    font-family: $primary-font !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0 0px 5px 5px;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      border: none;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $secondary;
+    border-color: $secondary;
+
+    &:hover {
+      background-color: darken($secondary, 10%);
+      border-color: darken($secondary, 10%);
+    }
+  }
+  &.login-btn {
+    color: $primary;
+    font-family: $primary-font !important;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0;
+    @include media-breakpoint-up(lg) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 68px;
+      width: 100px;
+    }
+
+    background-color: $highlight;
+    border-color: $highlight;
+    color: $primary;
+
+    &:hover {
+      color: $primary;
+      background-color: $white;
+      border-color: darken($primary, 10%);
+    }
+  }
+}
